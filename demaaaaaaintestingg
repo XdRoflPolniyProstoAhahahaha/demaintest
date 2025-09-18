@@ -1,12 +1,1031 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+----------- С Н А Ч А Л О   И Д У Т   Ч И Т   Ф У Н К Ц И И -----------
 
-]]--
 
-local v0=Instance.new("ScreenGui");v0.Name="DemainUI";v0.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;v0.Parent=game.Players.LocalPlayer:WaitForChild("PlayerGui");v0.ResetOnSpawn=false;local v6=Instance.new("Frame");v6.Name="MainFrame";v6.Position=UDim2.new(0.279059,0,0.237934,0);v6.Size=UDim2.new(0,497,0,350);v6.BackgroundColor3=Color3.new(0.101961,0.101961,0.101961);v6.BorderSizePixel=0;v6.Parent=v0;local v13=Instance.new("UIStroke");v13.Name="UIStroke";v13.Color=Color3.new(0.266667,0.266667,0.266667);v13.Parent=v6;local v17=Instance.new("Frame");v17.Name="TabsFrame";v17.Position=UDim2.new(0,0,0.01,0);v17.Size=UDim2.new(0,134,0,346);v17.BackgroundColor3=Color3.new(0.129412,0.129412,0.129412);v17.BorderSizePixel=0;v17.BorderColor3=Color3.new(0,0,0);v17.Parent=v6;local v25=Instance.new("TextButton");v25.Name="VISUALSTab";v25.Position=UDim2.new(0.0895522,0,0.182081,0);v25.Size=UDim2.new(0,122,0,32);v25.BackgroundColor3=Color3.new(1,1,1);v25.BackgroundTransparency=1;v25.BorderSizePixel=0;v25.BorderColor3=Color3.new(0,0,0);v25.Transparency=1;v25.Text="VISUALS";v25.TextColor3=Color3.new(0.8,0.8,0.8);v25.TextSize=15;v25.FontFace=Font.new("rbxasset://fonts/families/GothamSSm.json",Enum.FontWeight.Regular,Enum.FontStyle.Normal);v25.TextXAlignment=Enum.TextXAlignment.Left;v25.Parent=v17;v25.TextTransparency=0;local v42=Instance.new("Frame");v42.Name="Highlight";v42.Position=UDim2.new( -0.057377,0,0,0);v42.Size=UDim2.new(0, -2,0,32);v42.BackgroundColor3=Color3.new(1,0.333333,0.333333);v42.BorderSizePixel=0;v42.BorderColor3=Color3.new(1,0.333333,0.333333);v42.Visible=false;v42.Parent=v25;local v51=Instance.new("TextButton");v51.Name="AIMTab";v51.Position=UDim2.new(0.0895522,0,0.294798,0);v51.Size=UDim2.new(0,122,0,32);v51.BackgroundColor3=Color3.new(1,1,1);v51.BackgroundTransparency=1;v51.BorderSizePixel=0;v51.BorderColor3=Color3.new(0,0,0);v51.Transparency=1;v51.Text="AIM";v51.TextColor3=Color3.new(0.8,0.8,0.8);v51.TextSize=15;v51.FontFace=Font.new("rbxasset://fonts/families/GothamSSm.json",Enum.FontWeight.Regular,Enum.FontStyle.Normal);v51.TextXAlignment=Enum.TextXAlignment.Left;v51.Parent=v17;v51.TextTransparency=0;local v67=Instance.new("Frame");v67.Name="Highlight";v67.Position=UDim2.new( -0.057377,0,0,0);v67.Size=UDim2.new(0, -2,0,32);v67.BackgroundColor3=Color3.new(1,0.333333,0.333333);v67.BorderSizePixel=0;v67.BorderColor3=Color3.new(1,0.333333,0.333333);v67.Visible=false;v67.Parent=v51;local v76=Instance.new("TextButton");v76.Name="MISCTab";v76.Position=UDim2.new(0.0895522,0,0.410405,0);v76.Size=UDim2.new(0,122,0,32);v76.BackgroundColor3=Color3.new(1,1,1);v76.BackgroundTransparency=1;v76.BorderSizePixel=0;v76.BorderColor3=Color3.new(0,0,0);v76.Transparency=1;v76.Text="MISC";v76.TextColor3=Color3.new(0.8,0.8,0.8);v76.TextSize=15;v76.FontFace=Font.new("rbxasset://fonts/families/GothamSSm.json",Enum.FontWeight.Regular,Enum.FontStyle.Normal);v76.TextXAlignment=Enum.TextXAlignment.Left;v76.Parent=v17;v76.TextTransparency=0;local v92=Instance.new("Frame");v92.Name="Highlight";v92.Position=UDim2.new( -0.057377,0,0,0);v92.Size=UDim2.new(0, -2,0,32);v92.BackgroundColor3=Color3.new(1,0.333333,0.333333);v92.BorderSizePixel=0;v92.BorderColor3=Color3.new(1,0.333333,0.333333);v92.Parent=v76;local v100=Instance.new("Frame");v100.Name="Header";v100.Position=UDim2.new(0.269618,0,0.0128571,0);v100.Size=UDim2.new(0,363,0,49);v100.BackgroundColor3=Color3.new(0.129412,0.129412,0.129412);v100.BorderSizePixel=0;v100.BorderColor3=Color3.new(0,0,0);v100.ZIndex=13;v100.Parent=v6;local v109=Instance.new("Frame");v109.Name="HeaderLine";v109.Position=UDim2.new( -0.369146,0,1,0);v109.Size=UDim2.new(1.36915,0,0,2);v109.BackgroundColor3=Color3.new(1,0.333333,0.333333);v109.BorderSizePixel=0;v109.Parent=v100;local v116=Instance.new("TextLabel");v116.Name="Title";v116.Position=UDim2.new(0, -129,0, -5);v116.Size=UDim2.new(1, -40,1.1,0);v116.BackgroundTransparency=1;v116.Transparency=1;v116.Text="DEMAIN";v116.TextColor3=Color3.new(1,0.333333,0.333333);v116.TextSize=26;v116.FontFace=Font.new("rbxasset://fonts/families/GothamSSm.json",Enum.FontWeight.Bold,Enum.FontStyle.Normal);v116.TextXAlignment=Enum.TextXAlignment.Left;v116.Parent=v100;v116.TextTransparency=0;local v129=Instance.new("ScrollingFrame");v129.Name="VISUALSContent";v129.Position=UDim2.new(0,134,0,54);v129.Size=UDim2.new(0.93159, -100,0.93, -30);v129.BackgroundTransparency=1;v129.Visible=false;v129.Transparency=1;v129.ScrollBarImageColor3=Color3.new(0.266667,0.266667,0.266667);v129.ScrollBarThickness=2;v129.Parent=v6;local v139=Instance.new("Frame");v139.Name="Frame";v139.Position=UDim2.new(0,0,0.0642978,0);v139.Size=UDim2.new(0,325,0,39);v139.BackgroundColor3=Color3.new(1,1,1);v139.BackgroundTransparency=1;v139.BorderSizePixel=0;v139.BorderColor3=Color3.new(0,0,0);v139.Transparency=1;v139.Parent=v129;local v149=Instance.new("TextLabel");v149.Name="TextLabel";v149.Position=UDim2.new(0.04,0,0.0277778,0);v149.Size=UDim2.new(0,277,0,36);v149.BackgroundColor3=Color3.new(1,1,1);v149.BackgroundTransparency=1;v149.BorderSizePixel=0;v149.BorderColor3=Color3.new(0,0,0);v149.Transparency=1;v149.Text="ESP";v149.TextColor3=Color3.new(1,1,1);v149.TextSize=14;v149.FontFace=Font.new("rbxasset://fonts/families/GothamSSm.json",Enum.FontWeight.Regular,Enum.FontStyle.Normal);v149.TextXAlignment=Enum.TextXAlignment.Left;v149.Parent=v139;v149.TextTransparency=0;local v165=Instance.new("TextButton");v165.Name="EspButton";v165.Position=UDim2.new(1.04308, -32,0.474359, -8);v165.Size=UDim2.new(0,36,0,18);v165.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471);v165.BorderSizePixel=0;v165.Text="";v165.Parent=v139;local v173=Instance.new("Frame");v173.Name="Frame";v173.Position=UDim2.new(0.04,2,1.79, -30);v173.Size=UDim2.new(0,13,0,13);v173.BackgroundColor3=Color3.new(0.8,0.8,0.8);v173.BorderSizePixel=0;v173.Parent=v165;local v180=Instance.new("UIListLayout");v180.Name="UIListLayout";v180.Padding=UDim.new(0,8);v180.Parent=v129;local v184=Instance.new("Frame");v184.Name="Frame";v184.Position=UDim2.new(0,0,0.0642978,0);v184.Size=UDim2.new(0,325,0,39);v184.BackgroundColor3=Color3.new(1,1,1);v184.BackgroundTransparency=1;v184.BorderSizePixel=0;v184.BorderColor3=Color3.new(0,0,0);v184.Transparency=1;v184.Parent=v129;local v194=Instance.new("TextLabel");v194.Name="TextLabel";v194.Position=UDim2.new(0.04,0,0.0277778,0);v194.Size=UDim2.new(0,277,0,36);v194.BackgroundColor3=Color3.new(1,1,1);v194.BackgroundTransparency=1;v194.BorderSizePixel=0;v194.BorderColor3=Color3.new(0,0,0);v194.Transparency=1;v194.Text="Tracers";v194.TextColor3=Color3.new(1,1,1);v194.TextSize=14;v194.FontFace=Font.new("rbxasset://fonts/families/GothamSSm.json",Enum.FontWeight.Regular,Enum.FontStyle.Normal);v194.TextXAlignment=Enum.TextXAlignment.Left;v194.Parent=v184;v194.TextTransparency=0;local v210=Instance.new("TextButton");v210.Name="TracersButton";v210.Position=UDim2.new(1.04308, -32,0.474359, -8);v210.Size=UDim2.new(0,36,0,18);v210.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471);v210.BorderSizePixel=0;v210.Text="";v210.Parent=v184;local v218=Instance.new("Frame");v218.Name="Frame";v218.Position=UDim2.new(0.04,2,1.79, -30);v218.Size=UDim2.new(0,13,0,13);v218.BackgroundColor3=Color3.new(0.8,0.8,0.8);v218.BorderSizePixel=0;v218.Parent=v210;local v225=Instance.new("Frame");v225.Name="Frame";v225.Position=UDim2.new(0,0,0.0642978,0);v225.Size=UDim2.new(0,325,0,39);v225.BackgroundColor3=Color3.new(1,1,1);v225.BackgroundTransparency=1;v225.BorderSizePixel=0;v225.BorderColor3=Color3.new(0,0,0);v225.Transparency=1;v225.Parent=v129;local v235=Instance.new("TextLabel");v235.Name="TextLabel";v235.Position=UDim2.new(0.04,0,0.0277778,0);v235.Size=UDim2.new(0,277,0,36);v235.BackgroundColor3=Color3.new(1,1,1);v235.BackgroundTransparency=1;v235.BorderSizePixel=0;v235.BorderColor3=Color3.new(0,0,0);v235.Transparency=1;v235.Text="Distance";v235.TextColor3=Color3.new(1,1,1);v235.TextSize=14;v235.FontFace=Font.new("rbxasset://fonts/families/GothamSSm.json",Enum.FontWeight.Regular,Enum.FontStyle.Normal);v235.TextXAlignment=Enum.TextXAlignment.Left;v235.Parent=v225;v235.TextTransparency=0;local v251=Instance.new("TextButton");v251.Name="DistanceButton";v251.Position=UDim2.new(1.04308, -32,0.474359, -8);v251.Size=UDim2.new(0,36,0,18);v251.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471);v251.BorderSizePixel=0;v251.Text="";v251.Parent=v225;local v259=Instance.new("Frame");v259.Name="Frame";v259.Position=UDim2.new(0.04,2,1.79, -30);v259.Size=UDim2.new(0,13,0,13);v259.BackgroundColor3=Color3.new(0.8,0.8,0.8);v259.BorderSizePixel=0;v259.Parent=v251;local v266=Instance.new("TextButton");v266.Name="CloseButton";v266.Position=UDim2.new(0.919917,0,0.0384032,0);v266.Size=UDim2.new(0,30,0,30);v266.BackgroundColor3=Color3.new(1,1,1);v266.BackgroundTransparency=1;v266.BorderSizePixel=0;v266.BorderColor3=Color3.new(0,0,0);v266.ZIndex=34;v266.Transparency=1;v266.Text="×";v266.TextColor3=Color3.new(0.8,0.8,0.8);v266.TextSize=21;v266.FontFace=Font.new("rbxasset://fonts/families/GothamSSm.json",Enum.FontWeight.Bold,Enum.FontStyle.Normal);v266.Parent=v6;v266.TextTransparency=0;local v282=Instance.new("ScrollingFrame");v282.Name="MISCContent";v282.Position=UDim2.new(0,134,0,54);v282.Size=UDim2.new(0.93159, -100,0.93, -30);v282.BackgroundTransparency=1;v282.Transparency=1;v282.ScrollBarImageColor3=Color3.new(0.266667,0.266667,0.266667);v282.ScrollBarThickness=2;v282.Parent=v6;local v291=Instance.new("UIListLayout");v291.Name="UIListLayout";v291.Padding=UDim.new(0,8);v291.Parent=v282;local v295=Instance.new("Frame");v295.Name="Custom";v295.Size=UDim2.new(0,343,0,44);v295.BackgroundColor3=Color3.new(1,1,1);v295.BackgroundTransparency=1;v295.BorderSizePixel=0;v295.BorderColor3=Color3.new(0,0,0);v295.Transparency=1;v295.Parent=v282;local v304=Instance.new("ImageLabel");v304.Name="UserImageLabel";v304.Position=UDim2.new(0.0379009,0,0.136364,0);v304.Size=UDim2.new(0,38,0,38);v304.BackgroundColor3=Color3.new(1,1,1);v304.BorderSizePixel=0;v304.BorderColor3=Color3.new(0,0,0);v304.Image="rbxasset://textures/ui/GuiImagePlaceholder.png";v304.Parent=v295;v304.BackgroundTransparency=1;local v314=Instance.new("TextLabel");v314.Name="WelcomeLabel";v314.Position=UDim2.new(0.172012,0,0.136364,0);v314.Size=UDim2.new(0,185,0,36);v314.BackgroundColor3=Color3.new(1,1,1);v314.BackgroundTransparency=1;v314.BorderSizePixel=0;v314.BorderColor3=Color3.new(0,0,0);v314.Transparency=1;v314.Text="welcome "   .. game.Players.LocalPlayer.Name   .. "!" ;v314.TextColor3=Color3.new(1,1,1);v314.TextSize=18;v314.FontFace=Font.new("rbxasset://fonts/families/GothamSSm.json",Enum.FontWeight.Regular,Enum.FontStyle.Normal);v314.TextXAlignment=Enum.TextXAlignment.Left;v314.Parent=v295;v314.TextTransparency=0;local v330=Instance.new("Frame");v330.Name="CustomFovEnable";v330.Position=UDim2.new(0,0,0.0642978,0);v330.Size=UDim2.new(0,325,0,39);v330.BackgroundColor3=Color3.new(1,1,1);v330.BackgroundTransparency=1;v330.BorderSizePixel=0;v330.BorderColor3=Color3.new(0,0,0);v330.Transparency=1;v330.Parent=v282;local v340=Instance.new("TextLabel");v340.Name="TextLabel";v340.Position=UDim2.new(0.04,0,0.027778,0);v340.Size=UDim2.new(0,277,0,36);v340.BackgroundColor3=Color3.new(1,1,1);v340.BackgroundTransparency=1;v340.BorderSizePixel=0;v340.BorderColor3=Color3.new(0,0,0);v340.Transparency=1;v340.Text="Custom FOV";v340.TextColor3=Color3.new(1,1,1);v340.TextSize=14;v340.FontFace=Font.new("rbxasset://fonts/families/GothamSSm.json",Enum.FontWeight.Regular,Enum.FontStyle.Normal);v340.TextXAlignment=Enum.TextXAlignment.Left;v340.Parent=v330;v340.TextTransparency=0;local v356=Instance.new("TextButton");v356.Name="CustomFovEnable";v356.Position=UDim2.new(1.04308, -32,0.474359, -8);v356.Size=UDim2.new(0,36,0,18);v356.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471);v356.BorderSizePixel=0;v356.Text="";v356.Parent=v330;local v364=Instance.new("Frame");v364.Name="Frame";v364.Position=UDim2.new(0.04,2,1.79, -30);v364.Size=UDim2.new(0,13,0,13);v364.BackgroundColor3=Color3.new(0.8,0.8,0.8);v364.BorderSizePixel=0;v364.Parent=v356;local v371=Instance.new("Frame");v371.Name="FovFrame";v371.Position=UDim2.new(0,10,0,0);v371.Size=UDim2.new(1, -20,0,35);v371.BackgroundTransparency=1;v371.Transparency=1;v371.Parent=v282;local v378=Instance.new("TextLabel");v378.Name="TextLabel";v378.Position=UDim2.new(0.0408163,0,0,0);v378.Size=UDim2.new(0.971425,0,0,16);v378.BackgroundTransparency=1;v378.Transparency=1;v378.Text="FOV";v378.TextColor3=Color3.new(1,1,1);v378.TextSize=15;v378.FontFace=Font.new("rbxasset://fonts/families/GothamSSm.json",Enum.FontWeight.Regular,Enum.FontStyle.Normal);v378.TextXAlignment=Enum.TextXAlignment.Left;v378.Parent=v371;v378.TextTransparency=0;local v391=Instance.new("TextLabel");v391.Name="CurrentFOVlabel";v391.Position=UDim2.new(1, -40,0,0);v391.Size=UDim2.new(0,40,0,16);v391.BackgroundTransparency=1;v391.Transparency=1;v391.Text="90";v391.TextColor3=Color3.new(0.8,0.8,0.8);v391.TextSize=15;v391.FontFace=Font.new("rbxasset://fonts/families/GothamSSm.json",Enum.FontWeight.Regular,Enum.FontStyle.Normal);v391.TextXAlignment=Enum.TextXAlignment.Right;v391.Parent=v371;local v404=Instance.new("Frame");v404.Name="Frame";v404.Position=UDim2.new(0.0379009,0,1, -6);v404.Size=UDim2.new(0.962099,0,0,3);v404.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471);v404.BorderSizePixel=0;v404.Parent=v371;local v411=Instance.new("Frame");v411.Name="FOVSliderFrame";v411.Size=UDim2.new(0.5,0,1,0);v411.BackgroundColor3=Color3.new(1,0.333333,0.333333);v411.BorderSizePixel=0;v411.Parent=v404;local v417=Instance.new("TextButton");v417.Name="FOVSlider";v417.Position=UDim2.new(0.5, -5,0.5, -5);v417.Size=UDim2.new(0,10,0,10);v417.BackgroundColor3=Color3.new(1,1,1);v417.BorderSizePixel=0;v417.Text="";v417.Parent=v404;local v425=Instance.new("Frame");v425.Name="WarningFrame";v425.Position=UDim2.new(0.14,0,2.22,0);v425.Size=UDim2.new(0,100,0,37);v425.BackgroundColor3=Color3.new(1,1,1);v425.BackgroundTransparency=1;v425.BorderSizePixel=0;v425.BorderColor3=Color3.new(0,0,0);v425.Transparency=1;v425.Parent=v282;local v435=Instance.new("TextLabel");v435.Name="Warning";v435.Position=UDim2.new(0.14,0,2.22,0);v435.Size=UDim2.new(0,352,0,59);v435.BackgroundColor3=Color3.new(1,1,1);v435.BackgroundTransparency=1;v435.BorderSizePixel=0;v435.BorderColor3=Color3.new(0,0,0);v435.Transparency=1;v435.TextTransparency=0;v435.Text="This script is only suitable for the main game. It won't work for custom modes.";v435.TextColor3=Color3.new(1,1,1);v435.TextSize=16;v435.FontFace=Font.new("rbxasset://fonts/families/GothamSSm.json",Enum.FontWeight.Regular,Enum.FontStyle.Normal);v435.TextWrapped=true;v435.TextXAlignment=Enum.TextXAlignment.Left;v435.Parent=v425;local v452=Instance.new("ScrollingFrame");v452.Name="AIMContent";v452.Position=UDim2.new(0,134,0,54);v452.Size=UDim2.new(0.93159, -100,0.93, -30);v452.BackgroundTransparency=1;v452.Visible=false;v452.Transparency=1;v452.ScrollBarImageColor3=Color3.new(0.266667,0.266667,0.266667);v452.ScrollBarThickness=2;v452.Parent=v6;local v462=Instance.new("Frame");v462.Name="Frame";v462.Position=UDim2.new(0,0,0.0642978,0);v462.Size=UDim2.new(0,325,0,39);v462.BackgroundColor3=Color3.new(1,1,1);v462.BackgroundTransparency=1;v462.BorderSizePixel=0;v462.BorderColor3=Color3.new(0,0,0);v462.Transparency=1;v462.Parent=v452;local v472=Instance.new("TextLabel");v472.Name="TextLabel";v472.Position=UDim2.new(0.04,0,0.0277778,0);v472.Size=UDim2.new(0,277,0,36);v472.BackgroundColor3=Color3.new(1,1,1);v472.BackgroundTransparency=1;v472.BorderSizePixel=0;v472.BorderColor3=Color3.new(0,0,0);v472.Transparency=1;v472.TextTransparency=0;v472.Text="Aimbot";v472.TextColor3=Color3.new(1,1,1);v472.TextSize=14;v472.FontFace=Font.new("rbxasset://fonts/families/GothamSSm.json",Enum.FontWeight.Regular,Enum.FontStyle.Normal);v472.TextXAlignment=Enum.TextXAlignment.Left;v472.Parent=v462;local v488=Instance.new("TextButton");v488.Name="AimBotButton";v488.Position=UDim2.new(1.04308, -32,0.474359, -8);v488.Size=UDim2.new(0,36,0,18);v488.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471);v488.BorderSizePixel=0;v488.Text="";v488.Parent=v462;local v496=Instance.new("Frame");v496.Name="Frame";v496.Position=UDim2.new(0.04,2,1.79, -30);v496.Size=UDim2.new(0,13,0,13);v496.BackgroundColor3=Color3.new(0.8,0.8,0.8);v496.BorderSizePixel=0;v496.Parent=v488;local v503=Instance.new("UIListLayout");v503.Name="UIListLayout";v503.Padding=UDim.new(0,8);v503.Parent=v452;local v507=Instance.new("Frame");v507.Name="Frame";v507.Position=UDim2.new(0,0,0.0642978,0);v507.Size=UDim2.new(0,325,0,39);v507.BackgroundColor3=Color3.new(1,1,1);v507.BackgroundTransparency=1;v507.BorderSizePixel=0;v507.BorderColor3=Color3.new(0,0,0);v507.Transparency=1;v507.Parent=v452;local v517=Instance.new("TextLabel");v517.Name="TextLabel";v517.Position=UDim2.new(0.04,0,0.0277778,0);v517.Size=UDim2.new(0,277,0,36);v517.BackgroundColor3=Color3.new(1,1,1);v517.BackgroundTransparency=1;v517.BorderSizePixel=0;v517.BorderColor3=Color3.new(0,0,0);v517.Transparency=1;v517.TextTransparency=0;v517.Text="Fov Visible";v517.TextColor3=Color3.new(1,1,1);v517.TextSize=14;v517.FontFace=Font.new("rbxasset://fonts/families/GothamSSm.json",Enum.FontWeight.Regular,Enum.FontStyle.Normal);v517.TextXAlignment=Enum.TextXAlignment.Left;v517.Parent=v507;local v533=Instance.new("TextButton");v533.Name="FovVisibleButton";v533.Position=UDim2.new(1.04308, -32,0.474359, -8);v533.Size=UDim2.new(0,36,0,18);v533.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471);v533.BorderSizePixel=0;v533.Text="";v533.Parent=v507;local v541=Instance.new("Frame");v541.Name="Frame";v541.Position=UDim2.new(0.04,2,1.79, -30);v541.Size=UDim2.new(0,13,0,13);v541.BackgroundColor3=Color3.new(0.8,0.8,0.8);v541.BorderSizePixel=0;v541.Parent=v533;local v548=false;local v549=false;local v550=false;local v551=false;local v552=false;local v553=false;local v554=70;local v555=nil;local v556=false;local v557={};local function v558(v571) v129.Visible=false;v452.Visible=false;v282.Visible=false;v42.Visible=false;v67.Visible=false;v92.Visible=false;if (v571=="VISUALS") then v129.Visible=true;v42.Visible=true;elseif (v571=="AIM") then v452.Visible=true;v67.Visible=true;elseif (v571=="MISC") then v282.Visible=true;v92.Visible=true;end end local function v559(v578,v579,v580) if v580 then v579:TweenPosition(UDim2.new(0.54,2,1.79, -30),"Out","Quad",0.2,true);v579.BackgroundColor3=Color3.new(1,0.333333,0.333333);else v579:TweenPosition(UDim2.new(0.04,2,1.79, -30),"Out","Quad",0.2,true);v579.BackgroundColor3=Color3.new(0.8,0.8,0.8);end end local function v560(v581) v554=math.clamp(math.floor(v581),70,120);v391.Text=tostring(v554);local v583=(v554-70)/(120 -70) ;v411.Size=UDim2.new(v583,0,1,0);v417.Position=UDim2.new(v583, -5,0.5, -5);print("FOV:",v554);end v25.MouseButton1Click:Connect(function() v558("VISUALS");end);v51.MouseButton1Click:Connect(function() v558("AIM");end);v76.MouseButton1Click:Connect(function() v558("MISC");end);local function v561() local v586=workspace.CurrentCamera;local v587=game:GetService("Players");local v588=v587.LocalPlayer;local v589=game:GetService("RunService");local function v590(v615,v616) local v617=v616:WaitForChild("Humanoid");local v618=v616:WaitForChild("HumanoidRootPart");local v619=Drawing.new("Text");v619.Visible=false;v619.Center=true;v619.Outline=true;v619.Font=2;v619.Color=Color3.fromRGB(255,255,255);v619.Size=13;local v626,v627,v628;local function v629() v619.Visible=false;v619:Remove();if v626 then v626:Disconnect();end if v627 then v627:Disconnect();end if v628 then v628:Disconnect();end end v627=v616.AncestryChanged:Connect(function(v638,v639) if  not v639 then v629();end end);v628=v617.HealthChanged:Connect(function(v640) if ((v640<=0) or (v617:GetState()==Enum.HumanoidStateType.Dead)) then v629();end end);v626=v589.RenderStepped:Connect(function() if  not v556 then v629();return;end local v641,v642=v586:WorldToViewportPoint(v618.Position);if v642 then v619.Position=Vector2.new(v641.X,v641.Y);v619.Text=v615.Name;v619.Visible=true;else v619.Visible=false;end end);table.insert(v557,{dc=v629,player=v615});end local function v591(v630) if v630.Character then v590(v630,v630.Character);end v630.CharacterAdded:Connect(function(v643) v590(v630,v643);end);end for v631,v632 in pairs(v587:GetPlayers()) do if (v632~=v588) then v591(v632);end end v587.PlayerAdded:Connect(v591);end v165.MouseButton1Click:Connect(function() v549= not v549;v559(v165,v173,v549);print("ESP:",(v549 and "enabled") or "disabled" );v556=v549;if v549 then v561();else for v657,v658 in pairs(v557) do if v658.dc then v658.dc();end end v557={};end end);v210.MouseButton1Click:Connect(function() v550= not v550;v559(v210,v218,v550);print("Tracers:",(v550 and "enabled") or "disabled" );local v592=game:GetService("Players");local v593=game:GetService("RunService");local v594=workspace.CurrentCamera;local v595=v592.LocalPlayer;if v550 then local v644={};local function v645(v659) if v644[v659] then v644[v659]:Remove();v644[v659]=nil;end end v555=v593.RenderStepped:Connect(function() for v667,v668 in ipairs(v592:GetPlayers()) do if (v668~=v595) then local v672=v668.Character;local v673=v672 and v672:FindFirstChild("HumanoidRootPart") ;if (v672 and v673) then local v674,v675=v594:WorldToViewportPoint(v673.Position);if v675 then if  not v644[v668] then v644[v668]=Drawing.new("Line");v644[v668].Visible=true;v644[v668].Color=Color3.fromRGB(145,112,172);v644[v668].Thickness=2;v644[v668].Transparency=1;end local v676=Vector2.new(v594.ViewportSize.X/2 ,v594.ViewportSize.Y);v644[v668].From=v676;v644[v668].To=Vector2.new(v674.X,v674.Y);v644[v668].Visible=true;elseif v644[v668] then v644[v668].Visible=false;end else v645(v668);end end end end);elseif v555 then v555:Disconnect();v555=nil;end end);v251.MouseButton1Click:Connect(function() v551= not v551;v559(v251,v259,v551);print("Distance:",(v551 and "enabled") or "disabled" );end);v356.MouseButton1Click:Connect(function() v552= not v552;v559(v356,v364,v552);v371.Visible=v552;print("Custom FOV:",(v552 and "enabled") or "disabled" );end);v488.MouseButton1Click:Connect(function() v548= not v548;v559(v488,v496,v548);print("Aimbot:",(v548 and "enabled") or "disabled" );end);v533.MouseButton1Click:Connect(function() v553= not v553;v559(v533,v541,v553);print("FOV Visible:",(v553 and "enabled") or "disable" );end);local v562=false;local function v563(v597) if v562 then local v646=game:GetService("Players").LocalPlayer:GetMouse();local v647=v404;local v648=v647.AbsolutePosition;local v649=v647.AbsoluteSize;local v650=math.clamp(v646.X-v648.X ,0,v649.X);local v651=v650/v649.X ;local v652=70 + math.floor(v651 * 50 ) ;game.Workspace.Camera.FieldOfView=v652;v560(v652);end end v417.MouseButton1Down:Connect(function() v562=true;end);game:GetService("UserInputService").InputEnded:Connect(function(v598) if (v598.UserInputType==Enum.UserInputType.MouseButton1) then v562=false;end end);game:GetService("UserInputService").InputChanged:Connect(function(v599) if (v599.UserInputType==Enum.UserInputType.MouseMovement) then v563(v599);end end);v417.MouseButton1Down:Connect(function() v562=true;v563();end);v266.MouseButton1Click:Connect(function() v0.Enabled=false;end);game:GetService("UserInputService").InputBegan:Connect(function(v601,v602) if ( not v602 and (v601.KeyCode==Enum.KeyCode.RightShift)) then v0.Enabled= not v0.Enabled;end end);v558("VISUALS");v371.Visible=false;v559(v165,v173,v549);v559(v210,v218,v550);v559(v251,v259,v551);v559(v356,v364,v552);v559(v488,v496,v548);v559(v533,v541,v553);v560(v554);print("demainUI loaded successfully. Enjoy.");local v565=false;local v566,v567,v568;local function v569(v603) local v604=v603.Position-v567 ;v6.Position=UDim2.new(v568.X.Scale,v568.X.Offset + v604.X ,v568.Y.Scale,v568.Y.Offset + v604.Y );end v100.InputBegan:Connect(function(v606) if (v606.UserInputType==Enum.UserInputType.MouseButton1) then v565=true;v567=v606.Position;v568=v6.Position;v606.Changed:Connect(function() if (v606.UserInputState==Enum.UserInputState.End) then v565=false;end end);end end);v100.InputChanged:Connect(function(v607) if (v607.UserInputType==Enum.UserInputType.MouseMovement) then v566=v607;end end);game:GetService("UserInputService").InputChanged:Connect(function(v608) if ((v608==v566) and v565) then v569(v608);end end);local function v570() local v609=game.Players.LocalPlayer;local v610=v609.UserId;local v611=Enum.ThumbnailType.AvatarThumbnail;local v612=Enum.ThumbnailSize.Size420x420;game:GetService("Players"):GetUserThumbnailAsync(v610,v611,v612);v304.Image=string.format("https://www.roblox.com/headshot-thumbnail/image?userId=%d&width=420&height=420&format=png",v610);v314.Text="Добро пожаловать, "   .. v609.Name   .. "!" ;end v570();
+----------- С Н А Ч А Л О   И Д У Т   Ч И Т   Ф У Н К Ц И И -----------
+
+
+
+----------- С Н А Ч А Л О   И Д У Т   Ч И Т   Ф У Н К Ц И И -----------
+
+
+
+
+
+
+
+
+
+
+----------- К О Н Е Ц   Ч И Т   Ф У Н К Ц И Й -----------
+
+----------- К О Н Е Ц   Ч И Т   Ф У Н К Ц И Й -----------
+
+
+----------- К О Н Е Ц   Ч И Т   Ф У Н К Ц И Й -----------
+
+
+local DemainUI = Instance.new("ScreenGui")
+DemainUI.Name = "DemainUI"
+DemainUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+DemainUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+DemainUI.ResetOnSpawn = false
+
+local MainFrame = Instance.new("Frame")
+MainFrame.Name = "MainFrame"
+MainFrame.Position = UDim2.new(0.279059, 0, 0.237934, 0)
+MainFrame.Size = UDim2.new(0, 497, 0, 350)
+MainFrame.BackgroundColor3 = Color3.new(0.101961, 0.101961, 0.101961)
+MainFrame.BorderSizePixel = 0
+MainFrame.Parent = DemainUI
+
+local UIStroke = Instance.new("UIStroke")
+UIStroke.Name = "UIStroke"
+UIStroke.Color = Color3.new(0.266667, 0.266667, 0.266667)
+UIStroke.Parent = MainFrame
+
+local TabsFrame = Instance.new("Frame")
+TabsFrame.Name = "TabsFrame"
+TabsFrame.Position = UDim2.new(0, 0, 0.01, 0)
+TabsFrame.Size = UDim2.new(0, 134, 0, 346)
+TabsFrame.BackgroundColor3 = Color3.new(0.129412, 0.129412, 0.129412)
+TabsFrame.BorderSizePixel = 0
+TabsFrame.BorderColor3 = Color3.new(0, 0, 0)
+TabsFrame.Parent = MainFrame
+
+local VISUALSTab = Instance.new("TextButton")
+VISUALSTab.Name = "VISUALSTab"
+VISUALSTab.Position = UDim2.new(0.0895522, 0, 0.182081, 0)
+VISUALSTab.Size = UDim2.new(0, 122, 0, 32)
+VISUALSTab.BackgroundColor3 = Color3.new(1, 1, 1)
+VISUALSTab.BackgroundTransparency = 1
+VISUALSTab.BorderSizePixel = 0
+VISUALSTab.BorderColor3 = Color3.new(0, 0, 0)
+VISUALSTab.Transparency = 1
+VISUALSTab.Text = "VISUALS"
+VISUALSTab.TextColor3 = Color3.new(0.8, 0.8, 0.8)
+VISUALSTab.TextSize = 15
+VISUALSTab.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+VISUALSTab.TextXAlignment = Enum.TextXAlignment.Left
+VISUALSTab.Parent = TabsFrame
+VISUALSTab.TextTransparency = 0
+
+local Highlight = Instance.new("Frame")
+Highlight.Name = "Highlight"
+Highlight.Position = UDim2.new(-0.057377, 0, 0, 0)
+Highlight.Size = UDim2.new(0, -2, 0, 32)
+Highlight.BackgroundColor3 = Color3.new(1, 0.333333, 0.333333)
+Highlight.BorderSizePixel = 0
+Highlight.BorderColor3 = Color3.new(1, 0.333333, 0.333333)
+Highlight.Visible = false
+Highlight.Parent = VISUALSTab
+
+local AIMTab = Instance.new("TextButton")
+AIMTab.Name = "AIMTab"
+AIMTab.Position = UDim2.new(0.0895522, 0, 0.294798, 0)
+AIMTab.Size = UDim2.new(0, 122, 0, 32)
+AIMTab.BackgroundColor3 = Color3.new(1, 1, 1)
+AIMTab.BackgroundTransparency = 1
+AIMTab.BorderSizePixel = 0
+AIMTab.BorderColor3 = Color3.new(0, 0, 0)
+AIMTab.Transparency = 1
+AIMTab.Text = "AIM"
+AIMTab.TextColor3 = Color3.new(0.8, 0.8, 0.8)
+AIMTab.TextSize = 15
+AIMTab.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+AIMTab.TextXAlignment = Enum.TextXAlignment.Left
+AIMTab.Parent = TabsFrame
+AIMTab.TextTransparency = 0
+
+local Highlight2 = Instance.new("Frame")
+Highlight2.Name = "Highlight"
+Highlight2.Position = UDim2.new(-0.057377, 0, 0, 0)
+Highlight2.Size = UDim2.new(0, -2, 0, 32)
+Highlight2.BackgroundColor3 = Color3.new(1, 0.333333, 0.333333)
+Highlight2.BorderSizePixel = 0
+Highlight2.BorderColor3 = Color3.new(1, 0.333333, 0.333333)
+Highlight2.Visible = false
+Highlight2.Parent = AIMTab
+
+local MISCTab = Instance.new("TextButton")
+MISCTab.Name = "MISCTab"
+MISCTab.Position = UDim2.new(0.0895522, 0, 0.410405, 0)
+MISCTab.Size = UDim2.new(0, 122, 0, 32)
+MISCTab.BackgroundColor3 = Color3.new(1, 1, 1)
+MISCTab.BackgroundTransparency = 1
+MISCTab.BorderSizePixel = 0
+MISCTab.BorderColor3 = Color3.new(0, 0, 0)
+MISCTab.Transparency = 1
+MISCTab.Text = "MISC"
+MISCTab.TextColor3 = Color3.new(0.8, 0.8, 0.8)
+MISCTab.TextSize = 15
+MISCTab.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+MISCTab.TextXAlignment = Enum.TextXAlignment.Left
+MISCTab.Parent = TabsFrame
+MISCTab.TextTransparency = 0
+
+local Highlight3 = Instance.new("Frame")
+Highlight3.Name = "Highlight"
+Highlight3.Position = UDim2.new(-0.057377, 0, 0, 0)
+Highlight3.Size = UDim2.new(0, -2, 0, 32)
+Highlight3.BackgroundColor3 = Color3.new(1, 0.333333, 0.333333)
+Highlight3.BorderSizePixel = 0
+Highlight3.BorderColor3 = Color3.new(1, 0.333333, 0.333333)
+Highlight3.Parent = MISCTab
+
+local Header = Instance.new("Frame")
+Header.Name = "Header"
+Header.Position = UDim2.new(0.269618, 0, 0.0128571, 0)
+Header.Size = UDim2.new(0, 363, 0, 49)
+Header.BackgroundColor3 = Color3.new(0.129412, 0.129412, 0.129412)
+Header.BorderSizePixel = 0
+Header.BorderColor3 = Color3.new(0, 0, 0)
+Header.ZIndex = 13
+Header.Parent = MainFrame
+
+local HeaderLine = Instance.new("Frame")
+HeaderLine.Name = "HeaderLine"
+HeaderLine.Position = UDim2.new(-0.369146, 0, 1, 0)
+HeaderLine.Size = UDim2.new(1.36915, 0, 0, 2)
+HeaderLine.BackgroundColor3 = Color3.new(1, 0.333333, 0.333333)
+HeaderLine.BorderSizePixel = 0
+HeaderLine.Parent = Header
+
+local Title = Instance.new("TextLabel")
+Title.Name = "Title"
+Title.Position = UDim2.new(0, -129, 0, -5)
+Title.Size = UDim2.new(1, -40, 1.1, 0)
+Title.BackgroundTransparency = 1
+Title.Transparency = 1
+Title.Text = "DEMAIN"
+Title.TextColor3 = Color3.new(1, 0.333333, 0.333333)
+Title.TextSize = 26
+Title.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+Title.TextXAlignment = Enum.TextXAlignment.Left
+Title.Parent = Header
+Title.TextTransparency = 0
+
+local VISUALSContent = Instance.new("ScrollingFrame")
+VISUALSContent.Name = "VISUALSContent"
+VISUALSContent.Position = UDim2.new(0, 134, 0, 54)
+VISUALSContent.Size = UDim2.new(0.93159, -100, 0.93, -30)
+VISUALSContent.BackgroundTransparency = 1
+VISUALSContent.Visible = false
+VISUALSContent.Transparency = 1
+VISUALSContent.ScrollBarImageColor3 = Color3.new(0.266667, 0.266667, 0.266667)
+VISUALSContent.ScrollBarThickness = 2
+VISUALSContent.Parent = MainFrame
+
+local Frame = Instance.new("Frame")
+Frame.Name = "Frame"
+Frame.Position = UDim2.new(0, 0, 0.0642978, 0)
+Frame.Size = UDim2.new(0, 325, 0, 39)
+Frame.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame.BackgroundTransparency = 1
+Frame.BorderSizePixel = 0
+Frame.BorderColor3 = Color3.new(0, 0, 0)
+Frame.Transparency = 1
+Frame.Parent = VISUALSContent
+
+local TextLabel = Instance.new("TextLabel")
+TextLabel.Name = "TextLabel"
+TextLabel.Position = UDim2.new(0.04, 0, 0.0277778, 0)
+TextLabel.Size = UDim2.new(0, 277, 0, 36)
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.BorderSizePixel = 0
+TextLabel.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel.Transparency = 1
+TextLabel.Text = "ESP"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextSize = 14
+TextLabel.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel.Parent = Frame
+TextLabel.TextTransparency = 0
+
+local EspButton = Instance.new("TextButton")
+EspButton.Name = "EspButton"
+EspButton.Position = UDim2.new(1.04308, -32, 0.474359, -8)
+EspButton.Size = UDim2.new(0, 36, 0, 18)
+EspButton.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+EspButton.BorderSizePixel = 0
+EspButton.Text = ""
+EspButton.Parent = Frame
+
+
+local Frame2 = Instance.new("Frame")
+Frame2.Name = "Frame"
+Frame2.Position = UDim2.new(0.04, 2, 1.79, -30)
+Frame2.Size = UDim2.new(0, 13, 0, 13)
+Frame2.BackgroundColor3 = Color3.new(0.8, 0.8, 0.8)
+Frame2.BorderSizePixel = 0
+Frame2.Parent = EspButton
+
+local UIListLayout = Instance.new("UIListLayout")
+UIListLayout.Name = "UIListLayout"
+UIListLayout.Padding = UDim.new(0, 8)
+UIListLayout.Parent = VISUALSContent
+
+local Frame3 = Instance.new("Frame")
+Frame3.Name = "Frame"
+Frame3.Position = UDim2.new(0, 0, 0.0642978, 0)
+Frame3.Size = UDim2.new(0, 325, 0, 39)
+Frame3.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame3.BackgroundTransparency = 1
+Frame3.BorderSizePixel = 0
+Frame3.BorderColor3 = Color3.new(0, 0, 0)
+Frame3.Transparency = 1
+Frame3.Parent = VISUALSContent
+
+local TextLabel2 = Instance.new("TextLabel")
+TextLabel2.Name = "TextLabel"
+TextLabel2.Position = UDim2.new(0.04, 0, 0.0277778, 0)
+TextLabel2.Size = UDim2.new(0, 277, 0, 36)
+TextLabel2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel2.BackgroundTransparency = 1
+TextLabel2.BorderSizePixel = 0
+TextLabel2.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel2.Transparency = 1
+TextLabel2.Text = "Tracers"
+TextLabel2.TextColor3 = Color3.new(1, 1, 1)
+TextLabel2.TextSize = 14
+TextLabel2.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+TextLabel2.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel2.Parent = Frame3
+TextLabel2.TextTransparency = 0
+
+local TracersButton = Instance.new("TextButton")
+TracersButton.Name = "TracersButton"
+TracersButton.Position = UDim2.new(1.04308, -32, 0.474359, -8)
+TracersButton.Size = UDim2.new(0, 36, 0, 18)
+TracersButton.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+TracersButton.BorderSizePixel = 0
+TracersButton.Text = ""
+TracersButton.Parent = Frame3
+
+local Frame4 = Instance.new("Frame")
+Frame4.Name = "Frame"
+Frame4.Position = UDim2.new(0.04, 2, 1.79, -30)
+Frame4.Size = UDim2.new(0, 13, 0, 13)
+Frame4.BackgroundColor3 = Color3.new(0.8, 0.8, 0.8)
+Frame4.BorderSizePixel = 0
+Frame4.Parent = TracersButton
+
+local Frame5 = Instance.new("Frame")
+Frame5.Name = "Frame"
+Frame5.Position = UDim2.new(0, 0, 0.0642978, 0)
+Frame5.Size = UDim2.new(0, 325, 0, 39)
+Frame5.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame5.BackgroundTransparency = 1
+Frame5.BorderSizePixel = 0
+Frame5.BorderColor3 = Color3.new(0, 0, 0)
+Frame5.Transparency = 1
+Frame5.Parent = VISUALSContent
+
+local TextLabel3 = Instance.new("TextLabel")
+TextLabel3.Name = "TextLabel"
+TextLabel3.Position = UDim2.new(0.04, 0, 0.0277778, 0)
+TextLabel3.Size = UDim2.new(0, 277, 0, 36)
+TextLabel3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel3.BackgroundTransparency = 1
+TextLabel3.BorderSizePixel = 0
+TextLabel3.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel3.Transparency = 1
+TextLabel3.Text = "Distance"
+TextLabel3.TextColor3 = Color3.new(1, 1, 1)
+TextLabel3.TextSize = 14
+TextLabel3.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+TextLabel3.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel3.Parent = Frame5
+TextLabel3.TextTransparency = 0
+
+local DistanceButton = Instance.new("TextButton")
+DistanceButton.Name = "DistanceButton"
+DistanceButton.Position = UDim2.new(1.04308, -32, 0.474359, -8)
+DistanceButton.Size = UDim2.new(0, 36, 0, 18)
+DistanceButton.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+DistanceButton.BorderSizePixel = 0
+DistanceButton.Text = ""
+DistanceButton.Parent = Frame5
+
+local Frame6 = Instance.new("Frame")
+Frame6.Name = "Frame"
+Frame6.Position = UDim2.new(0.04, 2, 1.79, -30)
+Frame6.Size = UDim2.new(0, 13, 0, 13)
+Frame6.BackgroundColor3 = Color3.new(0.8, 0.8, 0.8)
+Frame6.BorderSizePixel = 0
+Frame6.Parent = DistanceButton
+
+local CloseButton = Instance.new("TextButton")
+CloseButton.Name = "CloseButton"
+CloseButton.Position = UDim2.new(0.919917, 0, 0.0384032, 0)
+CloseButton.Size = UDim2.new(0, 30, 0, 30)
+CloseButton.BackgroundColor3 = Color3.new(1, 1, 1)
+CloseButton.BackgroundTransparency = 1
+CloseButton.BorderSizePixel = 0
+CloseButton.BorderColor3 = Color3.new(0, 0, 0)
+CloseButton.ZIndex = 34
+CloseButton.Transparency = 1
+CloseButton.Text = "×"
+CloseButton.TextColor3 = Color3.new(0.8, 0.8, 0.8)
+CloseButton.TextSize = 21
+CloseButton.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+CloseButton.Parent = MainFrame
+CloseButton.TextTransparency = 0
+
+local MISCContent = Instance.new("ScrollingFrame")
+MISCContent.Name = "MISCContent"
+MISCContent.Position = UDim2.new(0, 134, 0, 54)
+MISCContent.Size = UDim2.new(0.93159, -100, 0.93, -30)
+MISCContent.BackgroundTransparency = 1
+MISCContent.Transparency = 1
+MISCContent.ScrollBarImageColor3 = Color3.new(0.266667, 0.266667, 0.266667)
+MISCContent.ScrollBarThickness = 2
+MISCContent.Parent = MainFrame
+
+local UIListLayout2 = Instance.new("UIListLayout")
+UIListLayout2.Name = "UIListLayout"
+UIListLayout2.Padding = UDim.new(0, 8)
+UIListLayout2.Parent = MISCContent
+
+local Custom = Instance.new("Frame")
+Custom.Name = "Custom"
+Custom.Size = UDim2.new(0, 343, 0, 44)
+Custom.BackgroundColor3 = Color3.new(1, 1, 1)
+Custom.BackgroundTransparency = 1
+Custom.BorderSizePixel = 0
+Custom.BorderColor3 = Color3.new(0, 0, 0)
+Custom.Transparency = 1
+Custom.Parent = MISCContent
+
+local UserImageLabel = Instance.new("ImageLabel")
+UserImageLabel.Name = "UserImageLabel"
+UserImageLabel.Position = UDim2.new(0.0379009, 0, 0.136364, 0)
+UserImageLabel.Size = UDim2.new(0, 38, 0, 38)
+UserImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+UserImageLabel.BorderSizePixel = 0
+UserImageLabel.BorderColor3 = Color3.new(0, 0, 0)
+UserImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+UserImageLabel.Parent = Custom
+UserImageLabel.BackgroundTransparency = 1
+
+local WelcomeLabel = Instance.new("TextLabel")
+WelcomeLabel.Name = "WelcomeLabel"
+WelcomeLabel.Position = UDim2.new(0.172012, 0, 0.136364, 0)
+WelcomeLabel.Size = UDim2.new(0, 185, 0, 36)
+WelcomeLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+WelcomeLabel.BackgroundTransparency = 1
+WelcomeLabel.BorderSizePixel = 0
+WelcomeLabel.BorderColor3 = Color3.new(0, 0, 0)
+WelcomeLabel.Transparency = 1
+WelcomeLabel.Text = "welcome "..game.Players.LocalPlayer.Name.."!"
+WelcomeLabel.TextColor3 = Color3.new(1, 1, 1)
+WelcomeLabel.TextSize = 18
+WelcomeLabel.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+WelcomeLabel.TextXAlignment = Enum.TextXAlignment.Left
+WelcomeLabel.Parent = Custom
+WelcomeLabel.TextTransparency = 0
+
+local CustomFovEnable = Instance.new("Frame")
+CustomFovEnable.Name = "CustomFovEnable"
+CustomFovEnable.Position = UDim2.new(0, 0, 0.0642978, 0)
+CustomFovEnable.Size = UDim2.new(0, 325, 0, 39)
+CustomFovEnable.BackgroundColor3 = Color3.new(1, 1, 1)
+CustomFovEnable.BackgroundTransparency = 1
+CustomFovEnable.BorderSizePixel = 0
+CustomFovEnable.BorderColor3 = Color3.new(0, 0, 0)
+CustomFovEnable.Transparency = 1
+CustomFovEnable.Parent = MISCContent
+
+local TextLabel4 = Instance.new("TextLabel")
+TextLabel4.Name = "TextLabel"
+TextLabel4.Position = UDim2.new(0.04, 0, 0.027778, 0)
+TextLabel4.Size = UDim2.new(0, 277, 0, 36)
+TextLabel4.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel4.BackgroundTransparency = 1
+TextLabel4.BorderSizePixel = 0
+TextLabel4.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel4.Transparency = 1
+TextLabel4.Text = "Custom FOV"
+TextLabel4.TextColor3 = Color3.new(1, 1, 1)
+TextLabel4.TextSize = 14
+TextLabel4.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+TextLabel4.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel4.Parent = CustomFovEnable
+TextLabel4.TextTransparency = 0
+
+local CustomFovEnable2 = Instance.new("TextButton")
+CustomFovEnable2.Name = "CustomFovEnable"
+CustomFovEnable2.Position = UDim2.new(1.04308, -32, 0.474359, -8)
+CustomFovEnable2.Size = UDim2.new(0, 36, 0, 18)
+CustomFovEnable2.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+CustomFovEnable2.BorderSizePixel = 0
+CustomFovEnable2.Text = ""
+CustomFovEnable2.Parent = CustomFovEnable
+
+local Frame7 = Instance.new("Frame")
+Frame7.Name = "Frame"
+Frame7.Position = UDim2.new(0.04, 2, 1.79, -30)
+Frame7.Size = UDim2.new(0, 13, 0, 13)
+Frame7.BackgroundColor3 = Color3.new(0.8, 0.8, 0.8)
+Frame7.BorderSizePixel = 0
+Frame7.Parent = CustomFovEnable2
+
+local FovFrame = Instance.new("Frame")
+FovFrame.Name = "FovFrame"
+FovFrame.Position = UDim2.new(0, 10, 0, 0)
+FovFrame.Size = UDim2.new(1, -20, 0, 35)
+FovFrame.BackgroundTransparency = 1
+FovFrame.Transparency = 1
+FovFrame.Parent = MISCContent
+
+local TextLabel5 = Instance.new("TextLabel")
+TextLabel5.Name = "TextLabel"
+TextLabel5.Position = UDim2.new(0.0408163, 0, 0, 0)
+TextLabel5.Size = UDim2.new(0.971425, 0, 0, 16)
+TextLabel5.BackgroundTransparency = 1
+TextLabel5.Transparency = 1
+TextLabel5.Text = "FOV"
+TextLabel5.TextColor3 = Color3.new(1, 1, 1)
+TextLabel5.TextSize = 15
+TextLabel5.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+TextLabel5.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel5.Parent = FovFrame
+TextLabel5.TextTransparency = 0
+
+local CurrentFOVlabel = Instance.new("TextLabel")
+CurrentFOVlabel.Name = "CurrentFOVlabel"
+CurrentFOVlabel.Position = UDim2.new(1, -40, 0, 0)
+CurrentFOVlabel.Size = UDim2.new(0, 40, 0, 16)
+CurrentFOVlabel.BackgroundTransparency = 1
+CurrentFOVlabel.Transparency = 1
+CurrentFOVlabel.Text = "90"
+CurrentFOVlabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
+CurrentFOVlabel.TextSize = 15
+CurrentFOVlabel.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+CurrentFOVlabel.TextXAlignment = Enum.TextXAlignment.Right
+CurrentFOVlabel.Parent = FovFrame
+
+local Frame8 = Instance.new("Frame")
+Frame8.Name = "Frame"
+Frame8.Position = UDim2.new(0.0379009, 0, 1, -6)
+Frame8.Size = UDim2.new(0.962099, 0, 0, 3)
+Frame8.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+Frame8.BorderSizePixel = 0
+Frame8.Parent = FovFrame
+
+local FOVSliderFrame = Instance.new("Frame")
+FOVSliderFrame.Name = "FOVSliderFrame"
+FOVSliderFrame.Size = UDim2.new(0.5, 0, 1, 0)
+FOVSliderFrame.BackgroundColor3 = Color3.new(1, 0.333333, 0.333333)
+FOVSliderFrame.BorderSizePixel = 0
+FOVSliderFrame.Parent = Frame8
+
+local FOVSlider = Instance.new("TextButton")
+FOVSlider.Name = "FOVSlider"
+FOVSlider.Position = UDim2.new(0.5, -5, 0.5, -5)
+FOVSlider.Size = UDim2.new(0, 10, 0, 10)
+FOVSlider.BackgroundColor3 = Color3.new(1, 1, 1)
+FOVSlider.BorderSizePixel = 0
+FOVSlider.Text = ""
+FOVSlider.Parent = Frame8
+
+local WarningFrame = Instance.new("Frame")
+WarningFrame.Name = "WarningFrame"
+WarningFrame.Position = UDim2.new(0.14, 0,2.22, 0)
+WarningFrame.Size = UDim2.new(0, 100, 0, 37)
+WarningFrame.BackgroundColor3 = Color3.new(1, 1, 1)
+WarningFrame.BackgroundTransparency = 1
+WarningFrame.BorderSizePixel = 0
+WarningFrame.BorderColor3 = Color3.new(0, 0, 0)
+WarningFrame.Transparency = 1
+WarningFrame.Parent = MISCContent
+
+local Warning = Instance.new("TextLabel")
+Warning.Name = "Warning"
+Warning.Position = UDim2.new(0.14, 0,2.22, 0)
+Warning.Size = UDim2.new(0, 352, 0, 59)
+Warning.BackgroundColor3 = Color3.new(1, 1, 1)
+Warning.BackgroundTransparency = 1
+Warning.BorderSizePixel = 0
+Warning.BorderColor3 = Color3.new(0, 0, 0)
+Warning.Transparency = 1
+Warning.TextTransparency = 0
+Warning.Text = "This script is only suitable for the main game. It won't work for custom modes."
+Warning.TextColor3 = Color3.new(1, 1, 1)
+Warning.TextSize = 16
+Warning.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+Warning.TextWrapped = true
+Warning.TextXAlignment = Enum.TextXAlignment.Left
+Warning.Parent = WarningFrame
+
+local AIMContent = Instance.new("ScrollingFrame")
+AIMContent.Name = "AIMContent"
+AIMContent.Position = UDim2.new(0, 134, 0, 54)
+AIMContent.Size = UDim2.new(0.93159, -100, 0.93, -30)
+AIMContent.BackgroundTransparency = 1
+AIMContent.Visible = false
+AIMContent.Transparency = 1
+AIMContent.ScrollBarImageColor3 = Color3.new(0.266667, 0.266667, 0.266667)
+AIMContent.ScrollBarThickness = 2
+AIMContent.Parent = MainFrame
+
+local Frame9 = Instance.new("Frame")
+Frame9.Name = "Frame"
+Frame9.Position = UDim2.new(0, 0, 0.0642978, 0)
+Frame9.Size = UDim2.new(0, 325, 0, 39)
+Frame9.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame9.BackgroundTransparency = 1
+Frame9.BorderSizePixel = 0
+Frame9.BorderColor3 = Color3.new(0, 0, 0)
+Frame9.Transparency = 1
+Frame9.Parent = AIMContent
+
+local TextLabel6 = Instance.new("TextLabel")
+TextLabel6.Name = "TextLabel"
+TextLabel6.Position = UDim2.new(0.04, 0, 0.0277778, 0)
+TextLabel6.Size = UDim2.new(0, 277, 0, 36)
+TextLabel6.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel6.BackgroundTransparency = 1
+TextLabel6.BorderSizePixel = 0
+TextLabel6.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel6.Transparency = 1
+TextLabel6.TextTransparency = 0
+TextLabel6.Text = "Aimbot"
+TextLabel6.TextColor3 = Color3.new(1, 1, 1)
+TextLabel6.TextSize = 14
+TextLabel6.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+TextLabel6.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel6.Parent = Frame9
+
+local AimBotButton = Instance.new("TextButton")
+AimBotButton.Name = "AimBotButton"
+AimBotButton.Position = UDim2.new(1.04308, -32, 0.474359, -8)
+AimBotButton.Size = UDim2.new(0, 36, 0, 18)
+AimBotButton.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+AimBotButton.BorderSizePixel = 0
+AimBotButton.Text = ""
+AimBotButton.Parent = Frame9
+
+local Frame10 = Instance.new("Frame")
+Frame10.Name = "Frame"
+Frame10.Position = UDim2.new(0.04, 2, 1.79, -30)
+Frame10.Size = UDim2.new(0, 13, 0, 13)
+Frame10.BackgroundColor3 = Color3.new(0.8, 0.8, 0.8)
+Frame10.BorderSizePixel = 0
+Frame10.Parent = AimBotButton
+
+local UIListLayout3 = Instance.new("UIListLayout")
+UIListLayout3.Name = "UIListLayout"
+UIListLayout3.Padding = UDim.new(0, 8)
+UIListLayout3.Parent = AIMContent
+
+local Frame11 = Instance.new("Frame")
+Frame11.Name = "Frame"
+Frame11.Position = UDim2.new(0, 0, 0.0642978, 0)
+Frame11.Size = UDim2.new(0, 325, 0, 39)
+Frame11.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame11.BackgroundTransparency = 1
+Frame11.BorderSizePixel = 0
+Frame11.BorderColor3 = Color3.new(0, 0, 0)
+Frame11.Transparency = 1
+Frame11.Parent = AIMContent
+
+local TextLabel7 = Instance.new("TextLabel")
+TextLabel7.Name = "TextLabel"
+TextLabel7.Position = UDim2.new(0.04, 0, 0.0277778, 0)
+TextLabel7.Size = UDim2.new(0, 277, 0, 36)
+TextLabel7.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel7.BackgroundTransparency = 1
+TextLabel7.BorderSizePixel = 0
+TextLabel7.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel7.Transparency = 1
+TextLabel7.TextTransparency = 0
+TextLabel7.Text = "Fov Visible"
+TextLabel7.TextColor3 = Color3.new(1, 1, 1)
+TextLabel7.TextSize = 14
+TextLabel7.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+TextLabel7.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel7.Parent = Frame11
+
+local FovVisibleButton = Instance.new("TextButton")
+FovVisibleButton.Name = "FovVisibleButton"
+FovVisibleButton.Position = UDim2.new(1.04308, -32, 0.474359, -8)
+FovVisibleButton.Size = UDim2.new(0, 36, 0, 18)
+FovVisibleButton.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+FovVisibleButton.BorderSizePixel = 0
+FovVisibleButton.Text = ""
+FovVisibleButton.Parent = Frame11
+
+local Frame12 = Instance.new("Frame")
+Frame12.Name = "Frame"
+Frame12.Position = UDim2.new(0.04, 2, 1.79, -30)
+Frame12.Size = UDim2.new(0, 13, 0, 13)
+Frame12.BackgroundColor3 = Color3.new(0.8, 0.8, 0.8)
+Frame12.BorderSizePixel = 0
+Frame12.Parent = FovVisibleButton
+
+
+----ДАЛЬШЕ ФУНКЦИОНАЛ
+
+-- Переменные для состояний
+local aimbot_enabled = false
+local esp_enabled = false
+local tracers_enabled = false
+local distance_enabled = false
+local fov_enabled = false
+local fov_visible_enabled = false
+local custom_fov_value = 70
+local tracersConnection = nil
+
+local espEnabled = false
+local espConnections = {}
+local espTexts = {}
+
+local tracersLines = {}
+
+-- Функция для переключения вкладок
+local function switchTab(selectedTab)
+	-- Скрыть все контенты
+	VISUALSContent.Visible = false
+	AIMContent.Visible = false
+	MISCContent.Visible = false
+
+	-- Скрыть все подсветки
+	Highlight.Visible = false
+	Highlight2.Visible = false
+	Highlight3.Visible = false
+
+	-- Показать выбранный контент и подсветку
+	if selectedTab == "VISUALS" then
+		VISUALSContent.Visible = true
+		Highlight.Visible = true
+	elseif selectedTab == "AIM" then
+		AIMContent.Visible = true
+		Highlight2.Visible = true
+	elseif selectedTab == "MISC" then
+		MISCContent.Visible = true
+		Highlight3.Visible = true
+	end
+end
+
+-- Функция для анимации переключения кнопок
+local function toggleButton(button, frame, enabled)
+	if enabled then
+		-- Включено - переместить frame вправо
+		frame:TweenPosition(UDim2.new(0.54, 2, 1.79, -30), "Out", "Quad", 0.2, true)
+		frame.BackgroundColor3 = Color3.new(1, 0.333333, 0.333333)
+	else
+		-- Выключено - переместить frame влево
+		frame:TweenPosition(UDim2.new(0.04, 2, 1.79, -30), "Out", "Quad", 0.2, true)
+		frame.BackgroundColor3 = Color3.new(0.8, 0.8, 0.8)
+	end
+end
+
+-- Функция для обновления значения слайдера FOV
+local function updateFOVSlider(value)
+	custom_fov_value = math.clamp(math.floor(value), 70, 120)
+	CurrentFOVlabel.Text = tostring(custom_fov_value)
+	local percentage = (custom_fov_value - 70) / (120 - 70)
+	FOVSliderFrame.Size = UDim2.new(percentage, 0, 1, 0)
+	FOVSlider.Position = UDim2.new(percentage, -5, 0.5, -5)
+
+	-- Здесь можно добавить логику применения FOV к игре
+	print("FOV:", custom_fov_value)
+end
+
+-- Обработчики кликов для вкладок
+VISUALSTab.MouseButton1Click:Connect(function()
+	switchTab("VISUALS")
+end)
+
+AIMTab.MouseButton1Click:Connect(function()
+	switchTab("AIM")
+end)
+
+MISCTab.MouseButton1Click:Connect(function()
+	switchTab("MISC")
+end)
+
+
+-----
+
+-----
+
+
+
+-- Обработчики для кнопок переключения функций
+EspButton.MouseButton1Click:Connect(function()
+  esp_enabled = not esp_enabled
+    toggleButton(EspButton, Frame2, esp_enabled)
+    print("ESP:", esp_enabled and "enabled" or "disabled")
+    
+    espEnabled = esp_enabled
+    
+    if esp_enabled then
+        -- ВКЛЮЧАЕМ ESP
+        local c = workspace.CurrentCamera
+        local ps = game:GetService("Players")
+        local lp = ps.LocalPlayer
+        local rs = game:GetService("RunService")
+        
+        local function removeESP(player)
+            if espTexts[player] then
+                espTexts[player]:Remove()
+                espTexts[player] = nil
+            end
+        end
+        
+        local function esp(p, cr)
+            if espTexts[p] then return end -- Уже есть ESP
+            
+            local h = cr:WaitForChild("Humanoid")
+            local hrp = cr:WaitForChild("HumanoidRootPart")
+        
+            local text = Drawing.new("Text")
+            text.Visible = false
+            text.Center = true
+            text.Outline = true 
+            text.Font = 2
+            text.Color = Color3.fromRGB(255, 255, 255)
+            text.Size = 13
+            
+            espTexts[p] = text
+        
+            -- Проверка смерти
+            local function checkHealth()
+                if not cr or not h then return true end
+                return h.Health <= 0 or h:GetState() == Enum.HumanoidStateType.Dead
+            end
+        
+            rs.RenderStepped:Connect(function()
+                if not espEnabled or checkHealth() or not cr.Parent then
+                    removeESP(p)
+                    return
+                end
+                
+                local hrp_pos, hrp_onscreen = c:WorldToViewportPoint(hrp.Position)
+                if hrp_onscreen then
+                    text.Position = Vector2.new(hrp_pos.X, hrp_pos.Y - 50)
+                    text.Text = p.Name .. " [" .. math.floor(h.Health) .. " HP]"
+                    text.Visible = true
+                else
+                    text.Visible = false
+                end
+            end)
+        end
+        
+        for _, p in pairs(ps:GetPlayers()) do 
+            if p ~= lp and p.Character then
+                esp(p, p.Character)
+            end
+            p.CharacterAdded:Connect(function(cr)
+                if p ~= lp then
+                    esp(p, cr)
+                end
+            end)
+        end
+        
+    else
+        -- ВЫКЛЮЧАЕМ И ОЧИЩАЕМ ESP
+        for player, text in pairs(espTexts) do
+            if text then
+                text:Remove()
+            end
+        end
+        espTexts = {}
+    end
+end)
+
+TracersButton.MouseButton1Click:Connect(function()
+	 tracers_enabled = not tracers_enabled
+    toggleButton(TracersButton, Frame4, tracers_enabled)
+    print("Tracers:", tracers_enabled and "enabled" or "disabled")
+    
+    if tracers_enabled then
+        -- ВКЛЮЧАЕМ ТРЕЙСЕРЫ
+        local players = game:GetService("Players")
+        local runService = game:GetService("RunService")
+        local camera = workspace.CurrentCamera
+        local localPlayer = players.LocalPlayer
+        
+        tracersConnection = runService.RenderStepped:Connect(function()
+            for _, player in ipairs(players:GetPlayers()) do
+                if player ~= localPlayer then
+                    local character = player.Character
+                    local hrp = character and character:FindFirstChild("HumanoidRootPart")
+                    
+                    if character and hrp then
+                        local pos, onScreen = camera:WorldToViewportPoint(hrp.Position)
+                        
+                        if onScreen then
+                            if not tracersLines[player] then
+                                tracersLines[player] = Drawing.new("Line")
+                                tracersLines[player].Visible = true
+                                tracersLines[player].Color = Color3.fromRGB(145, 112, 172)
+                                tracersLines[player].Thickness = 2
+                                tracersLines[player].Transparency = 1
+                            end
+                            
+                            local center = Vector2.new(camera.ViewportSize.X / 2, camera.ViewportSize.Y)
+                            tracersLines[player].From = center
+                            tracersLines[player].To = Vector2.new(pos.X, pos.Y)
+                            tracersLines[player].Visible = true
+                        else
+                            if tracersLines[player] then
+                                tracersLines[player].Visible = false
+                            end
+                        end
+                    else
+                        if tracersLines[player] then
+                            tracersLines[player]:Remove()
+                            tracersLines[player] = nil
+                        end
+                    end
+                end
+            end
+        end)
+        
+    else
+        -- ВЫКЛЮЧАЕМ И ОЧИЩАЕМ ТРЕЙСЕРЫ
+        if tracersConnection then
+            tracersConnection:Disconnect()
+            tracersConnection = nil
+        end
+        
+        for player, line in pairs(tracersLines) do
+            if line then
+                line:Remove()
+            end
+        end
+        tracersLines = {}
+    end
+end)
+
+DistanceButton.MouseButton1Click:Connect(function()
+	distance_enabled = not distance_enabled
+	toggleButton(DistanceButton, Frame6, distance_enabled)
+	print("Distance:", distance_enabled and "enabled" or "disabled")
+	-- Здесь добавить логику Distance
+end)
+
+CustomFovEnable2.MouseButton1Click:Connect(function()
+	fov_enabled = not fov_enabled
+	toggleButton(CustomFovEnable2, Frame7, fov_enabled)
+	FovFrame.Visible = fov_enabled
+	print("Custom FOV:", fov_enabled and "enabled" or "disabled")
+end)
+
+AimBotButton.MouseButton1Click:Connect(function()
+	aimbot_enabled = not aimbot_enabled
+	toggleButton(AimBotButton, Frame10, aimbot_enabled)
+	print("Aimbot:", aimbot_enabled and "enabled" or "disabled")
+	-- Здесь добавить логику Aimbot
+end)
+
+FovVisibleButton.MouseButton1Click:Connect(function()
+	fov_visible_enabled = not fov_visible_enabled
+	toggleButton(FovVisibleButton, Frame12, fov_visible_enabled)
+	print("FOV Visible:", fov_visible_enabled and "enabled" or "disable")
+	-- Здесь добавить логику видимого FOV
+end)
+
+-- Логика для слайдера FOV
+local dragging = false
+
+local function onMouseMove(input)
+	if dragging then
+		local mouse = game:GetService("Players").LocalPlayer:GetMouse()
+		local sliderFrame = Frame8
+		local sliderPosition = sliderFrame.AbsolutePosition
+		local sliderSize = sliderFrame.AbsoluteSize
+
+		local xOffset = math.clamp(mouse.X - sliderPosition.X, 0, sliderSize.X)
+		local percentage = xOffset / sliderSize.X
+		local value = 70 + math.floor(percentage * 50) 
+		game.Workspace.Camera.FieldOfView = value -- От 70 до 120
+
+		updateFOVSlider(value)
+	end
+end
+
+FOVSlider.MouseButton1Down:Connect(function()
+	dragging = true
+end)
+
+game:GetService("UserInputService").InputEnded:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+		dragging = false
+	end
+end)
+
+game:GetService("UserInputService").InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement then
+		onMouseMove(input)
+	end
+end)
+
+-- Также добавляем обработчик клика по самой полосе слайдера
+FOVSlider.MouseButton1Down:Connect(function()
+	dragging = true
+	onMouseMove()
+end)
+
+-- Обработчик для закрытия GUI
+CloseButton.MouseButton1Click:Connect(function()
+	DemainUI.Enabled = false
+end)
+
+-- Сворачивание/разворачивание GUI по правому Shift
+game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessed)
+	if not gameProcessed and input.KeyCode == Enum.KeyCode.RightShift then
+		DemainUI.Enabled = not DemainUI.Enabled
+	end
+end)
+
+-- Инициализация
+switchTab("VISUALS") -- По умолчанию открыта вкладка VISUALS
+FovFrame.Visible = false -- Скрыть слайдер FOV по умолчанию
+
+-- Установка начальных позиций для кнопок
+toggleButton(EspButton, Frame2, esp_enabled)
+toggleButton(TracersButton, Frame4, tracers_enabled)
+toggleButton(DistanceButton, Frame6, distance_enabled)
+toggleButton(CustomFovEnable2, Frame7, fov_enabled)
+toggleButton(AimBotButton, Frame10, aimbot_enabled)
+toggleButton(FovVisibleButton, Frame12, fov_visible_enabled)
+
+-- Установка начального значения FOV
+updateFOVSlider(custom_fov_value)
+
+print("demainUI loaded successfully. Enjoy.")
+
+
+
+
+
+
+
+
+
+-- Перетаскивание GUI мышкой за Header (новый код)
+local guiDragging = false
+local guiDragInput, guiDragStart, guiStartPos
+
+local function updateGuiPosition(input)
+	local delta = input.Position - guiDragStart
+	MainFrame.Position = UDim2.new(guiStartPos.X.Scale, guiStartPos.X.Offset + delta.X, guiStartPos.Y.Scale, guiStartPos.Y.Offset + delta.Y)
+end
+
+Header.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+		guiDragging = true
+		guiDragStart = input.Position
+		guiStartPos = MainFrame.Position
+
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				guiDragging = false
+			end
+		end)
+	end
+end)
+
+Header.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement then
+		guiDragInput = input
+	end
+end)
+
+game:GetService("UserInputService").InputChanged:Connect(function(input)
+	if input == guiDragInput and guiDragging then
+		updateGuiPosition(input)
+	end
+end)
+
+
+
+
+
+
+
+-- Получение аватара игрока
+local function setupPlayerAvatar()
+	local player = game.Players.LocalPlayer
+	local userId = player.UserId
+
+	-- Создаем ссылку на аватар игрока
+	local thumbnailType = Enum.ThumbnailType.AvatarThumbnail
+	local thumbnailSize = Enum.ThumbnailSize.Size420x420
+
+	game:GetService("Players"):GetUserThumbnailAsync(userId, thumbnailType, thumbnailSize)
+
+	-- Устанавливаем изображение
+	UserImageLabel.Image = string.format("https://www.roblox.com/headshot-thumbnail/image?userId=%d&width=420&height=420&format=png", userId)
+
+	-- Обновляем приветствие
+	WelcomeLabel.Text = "Добро пожаловать, " .. player.Name .. "!"
+end
+
+-- Вызываем функцию после загрузки GUI
+setupPlayerAvatar()
